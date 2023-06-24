@@ -1,38 +1,127 @@
-.App {
+body {
+  background-color: #c8c8c8;
+  color: #333;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
   text-align: center;
+  margin-bottom: 20px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.todo-form {
   display: flex;
-  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.todo-form input[type='text'] {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 3px;
+}
+
+.todo-form button {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 3px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.todo-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.todo-item {
+  display: flex;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 12px;
+  border-bottom: 1px solid #ccc;
 }
 
-.App-link {
-  color: #61dafb;
+.todo-item:last-child {
+  border-bottom: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.todo-item.completed {
+  text-decoration: line-through;
+  color: #888;
+}
+
+.todo-item input[type='checkbox'] {
+  margin-right: 10px;
+}
+
+.todo-item input[type='text'] {
+  flex: 1;
+  margin-left: 10px;
+  padding: 5px;
+  border: none;
+  border-radius: 3px;
+  font-weight: bold;
+}
+
+.todo-item.completed input[type='text'] {
+  color: #bbb;
+  font-weight: normal;
+}
+
+.todo-item .actions {
+  margin-left: auto;
+}
+
+.todo-item .actions button {
+  background-color: #d9534f;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 3px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.dark-theme {
+  background-color: #333;
+  color: #fff;
+}
+
+.dark-theme .container {
+  background-color: #444;
+  color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.dark-theme h1 {
+  color: #fff;
+}
+
+.dark-theme .todo-item {
+  background-color: #555;
+  color: #fff;
+  border-bottom-color: #666;
+}
+
+.dark-theme .todo-item.completed {
+  color: #888;
+}
+
+.dark-theme .todo-item input[type='text'] {
+  color: #bbb;
+}
+
+.dark-theme .todo-item .actions button {
+  background-color: #d9534f;
 }
